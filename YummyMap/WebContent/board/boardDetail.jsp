@@ -80,8 +80,7 @@
         </div>
         <div class="b-w border-bottom ml-5 mt-4"></div>
         <div class="txt-body pt-4 " id="txt">
-            내용ㅁㄴㅇㄻㄴㅇ리만어림나얼민아ㅓㄹ;ㅣㅁ넝ㄹ;ㅣㅁ너ㅏㅇ리;만ㅇ러민ㅇ라ㅓㅁㅇ노라ㅓㅗ만어로민아러미낭럼;ㅣㄴ아럼ㄹㅇ니ㅓㅏ
-
+         	   내용
         </div>
     </div>
     <!--게시글 영역 마지막 입니다-->
@@ -106,30 +105,6 @@
             </form>
         </div>
         <!--댓글 input태그 마지막 영역 입니다-->
-        <!--댓글 내용 시작 영역 입니다-->
-        <div class="reply-body mt-4 " id="">
-            <div class="d-flex reply-txt-1 mt-3">
-                <p id="">블루</p>
-                <p id="" class="pl-2">2020/05/16</p>
-            </div>
-            <div class="reply-txt-2 ">
-                <p id="">내용</p>
-            </div>
-            <div class="b-w border-bottom ml-5 mt-4"></div>
-        </div>
-        <!--댓글 내용 마지막 영역 입니다-->
-        <!--댓글 내용 시작 영역 입니다-->
-        <div class="reply-body mt-4 " id="">
-            <div class="d-flex reply-txt-1 mt-3">
-                <p id="">블루</p>
-                <p id="" class="pl-2">2020/05/16</p>
-            </div>
-            <div class="reply-txt-2 ">
-                <p id="">내용</p>
-            </div>
-            <div class="b-w border-bottom ml-5 mt-4"></div>
-        </div>
-        <!--댓글 내용 마지막 영역 입니다-->
         <!--댓글 내용 시작 영역 입니다-->
         <div class="reply-body mt-4 " id="">
             <div class="d-flex reply-txt-1 mt-3">
