@@ -1,0 +1,11 @@
+.tcolor{color: rgb(255, 128, 89) !important;}
+.logo{position: absolute; top: 40px; left: 218px; font-size: 25pt; font-weight: bold; margin-top: 20px;}
+.nav-item-1{position: absolute; top: 120px; left: 1040px; width: 150px;}
+.main-body{position: absolute; top: 220px; left: 200px;}
+.b-subtitle{position: absolute; top: 120px; left: 275px; width: 200px; height: 70px; font-size: 20pt; color: rgb(248, 187, 168);}
+.nav-btn{position: absolute; top: 10px; left: 960px; width: 220px;}
+.nav-body{width: 100%; height: 200px;}
+.nav-item{background-color: rgb(255, 128, 89); color: white;}
+.nav-item-size{font-size: 30pt;}
+.txt-line{width: 980px; height: 880px;}
+.txt-body{width: 980px; height: 100px;}
