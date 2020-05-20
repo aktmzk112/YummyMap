@@ -29,7 +29,7 @@
 		<div class="bar"></div>
 		<div class="row row-cols-2 sub">
 			<div class="col-3 pt-5 pr-4 text-right bar-ri">
-				<div><a href="#">
+				<div><a href="http://localhost/YummyMap/admin/main.mmy">
 						<h5>회원 관리</h5>
 					</a></div>
 				<div class="mt-3">
@@ -48,6 +48,7 @@
 					</div>
 
 					<form action="" method="POST" id="frm">
+						<input type="hidden" value="${param.mno }">
 						<div class="mt-4 row ml-1">
 							<h5 class="in-bl text-left ml-2 col-3 mt-1">이름 </h5>
 							<input class="col-6 form-control border-b margin-name"  type="text" id="name" name="name">

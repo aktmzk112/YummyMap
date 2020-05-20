@@ -10,23 +10,27 @@
 	<link rel="stylesheet" href="/YummyMap/css/admin/base.css">
 	<link rel="stylesheet" href="/YummyMap/css/admin/main.css">
 	<script type="text/javascript" src="/YummyMap/js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="/YummyMap/js/admin/main.js"></script>
 	<title>회원관리 페이지</title>
 </head>
 
 <body>
+	<form method="post" action="/YummyMap/admin/remember.mmy" id="frm">
+		<input type="hidden" name="mno" id="no" >
+	</form>
 	<div class="container mt-1">
 		<nav class="d-flex justify-content-between navbar navbar-light">
 			<a class="navbar-brand tcolor logo mt-5" href="#">
 				YUMMY MAP
 			</a>
 			<div>
-				로그인 이미지
+				${SID}
 			</div>
 		</nav>
 		<div class="bar"></div>
 		<div class="row row-cols-2 mt-2 sub">
 			<div class="col-3 pt-5 pr-4 text-right bar-ri">
-				<div><a href="#">
+				<div><a href="http://localhost/YummyMap/admin/main.mmy">
 						<h5>회원 관리</h5>
 					</a></div>
 				<div class="mt-3">
@@ -46,14 +50,14 @@
 						<div class="col-3">비고</div>
 					</div>
 					<div class="row bar py-1"></div>
-					<div class="d-flex mt-3 justify-content-around text-center">
+					<div class="d-flex mt-3 justify-content-around text-center" id="1">
 						<div class="col-2">1</div>
 						<div class="col-2">euns</div>
 						<div class="col-2">강사님</div>
 						<div class="col-2">O</div>
 						<div class="col-3">
-							<button class="col-5">수정</button>
-							<button class="col-5">삭제</button>
+							<button class="col-5 obtn">수정</button>
+							<button class="col-5" id="rbtn">삭제</button>
 						</div>
 					</div>
 				</div>
