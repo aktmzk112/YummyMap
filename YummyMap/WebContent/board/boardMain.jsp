@@ -45,75 +45,86 @@
   <a class="navbar-brand tcolor logo" href="#" id="">
       YUMMY MAP
   </a>
-  <div class="b-subtitle text-right"><p class="pt-3">커뮤니티</p></div>
+  <div class="b-subtitle text-left"><p class="pt-3">커뮤니티</p></div>
   <div class=" nav-item-1 d-flex justify-content-end">
-      <a class="navbar-brand nav-item-size" href="#" id="">
-          <i class="fas fa-gamepad"></i>
-      </a>
+    <a class="navbar-brand nav-item-size" href="#" id="">
+      <i class="fas fa-gamepad"></i>
+    </a>
+    <a class="navbar-brand nav-item-size" href="#">
+        <i class="far fa-clipboard"></i>
+    </a>
   </div>
 </div>
 <!-- nav 마지막 입니다-->
 
 <!-- body 시작 입니다-->
   <div class="main-body">
-<!--게시글 영역 입니다-->
-<div class="txt-line shadow-sm border mb-4">
-  <!-- 게시글 1개 시작 부분입니다-->
-  <div class="txt-body d-flex border-bottom" id="">
-    <div class="txt-no text-center">
-      <div class="pt-4">1</div>
-    </div>
-    <div class="txt-title">
-      <div class="pt-4 bold-font">안녕하세요</div>
-      <div class="d-flex pt-2">
-        <div class="txt-title-info pr-4 border-right">2020/05/16</div>
-        <div class="txt-title-info pl-4 pr-4 border-right">blue</div>
-        <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
+    <div class="writebox d-flex">
+      <div class="writeBtnBox">
+        <button type="button" class="btn btn-secondary" id="write">글쓰기</button>
+      </div>
+      <div class="">
+        <input class="form-control selbox" type="text" placeholder="검색">
       </div>
     </div>
-    <div class="txt-img pr-3">
-      <div class="txt-img-item mt-2 ml-3"><img src="../../img/img111.jpg"></div>
-    </div>
-  </div>
-  <!-- 게시글 1개 마지막 부분입니다-->
-  <!-- 게시글 1개 시작 부분입니다-->
-  <div class="txt-body d-flex border-bottom" id="">
-    <div class="txt-no text-center">
-      <div class="pt-4">1</div>
-    </div>
-    <div class="txt-title">
-      <div class="pt-4 bold-font">안녕하세요</div>
-      <div class="d-flex pt-2">
-        <div class="txt-title-info pr-4 border-right">2020/05/16</div>
-        <div class="txt-title-info pl-4 pr-4 border-right">blue</div>
-        <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
+  <!--게시글 영역 입니다-->
+    <div class="txt-line shadow-sm border mt-2 mb-4">
+      <!-- 게시글 1개 시작 부분입니다-->
+      <div class="txt-body d-flex border-bottom" id="">
+        <div class="txt-no text-center">
+          <div class="pt-4">1</div>
+        </div>
+        <div class="txt-title">
+          <div class="pt-4 bold-font">안녕하세요</div>
+          <div class="d-flex pt-2">
+            <div class="txt-title-info pr-4 border-right">2020/05/16</div>
+            <div class="txt-title-info pl-4 pr-4 border-right">blue</div>
+            <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
+          </div>
+        </div>
+        <div class="txt-img pr-3">
+          <div class="txt-img-item mt-2 ml-3"><img src="../../img/img111.jpg"></div>
+        </div>
       </div>
-    </div>
+      <!-- 게시글 1개 마지막 부분입니다-->
+      <!-- 게시글 1개 시작 부분입니다-->
+      <div class="txt-body d-flex border-bottom" id="">
+        <div class="txt-no text-center">
+          <div class="pt-4">1</div>
+        </div>
+        <div class="txt-title">
+          <div class="pt-4 bold-font">안녕하세요</div>
+          <div class="d-flex pt-2">
+            <div class="txt-title-info pr-4 border-right">2020/05/16</div>
+            <div class="txt-title-info pl-4 pr-4 border-right">blue</div>
+            <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
+          </div>
+        </div>
 
-  </div>
-  <!-- 게시글 1개 마지막 부분입니다-->
-</div>
-<!-- 페이징 부분입니다-->
-<div class="pager d-flex justify-content-center paging">
-  <div class="mb-5">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
-<!-- 페이징 마지막 부분입니다-->
+      </div>
+      <!-- 게시글 1개 마지막 부분입니다-->
+    </div>
+    <!-- 페이징 부분입니다-->
+    <div class="pager d-flex justify-content-center paging">
+      <div class="mb-5">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- 페이징 마지막 부분입니다-->
   </div>
 <!-- body 마지막 입니다-->
 </body>

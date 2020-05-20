@@ -49,7 +49,7 @@
   <a class="navbar-brand tcolor logo" href="#" id="">
       YUMMY MAP
   </a>
-  <div class="b-subtitle text-right"><p class="pt-3">커뮤니티</p></div>
+  <div class="b-subtitle text-left"><p class="pt-3">커뮤니티</p></div>
   <div class=" nav-item-1 d-flex justify-content-end">
       <a class="navbar-brand nav-item-size" href="#" id="">
           <i class="fas fa-gamepad"></i>
@@ -80,7 +80,7 @@
           <input type="text" class="form-control ml-1" id="title" name="title" placeholder="제목">
         </div>
         <div class="form-group mt-2">
-            <textarea class="form-control" id="txt"" rows="15" name="txt"></textarea>
+            <textarea class="form-control" id="txt"" rows="15" name="txt" style="resize: none;"></textarea>
         </div>
         <button type="button" class="btn btn-primary btn-sm" id="submitBtn">완료</button>
         <button type="button" class="btn btn-secondary btn-sm" id="exitBtn">취소</button>
