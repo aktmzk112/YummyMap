@@ -71,9 +71,25 @@
         <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
       </div>
     </div>
-    <div class="txt-img">
-      <div class="txt-img-item mt-2 ml-3"><img src="/YummyMap/img/img111.jpg"></div>
+    <div class="txt-img pr-3">
+      <div class="txt-img-item mt-2 ml-3"><img src="../../img/img111.jpg"></div>
     </div>
+  </div>
+  <!-- 게시글 1개 마지막 부분입니다-->
+  <!-- 게시글 1개 시작 부분입니다-->
+  <div class="txt-body d-flex border-bottom" id="">
+    <div class="txt-no text-center">
+      <div class="pt-4">1</div>
+    </div>
+    <div class="txt-title">
+      <div class="pt-4 bold-font">안녕하세요</div>
+      <div class="d-flex pt-2">
+        <div class="txt-title-info pr-4 border-right">2020/05/16</div>
+        <div class="txt-title-info pl-4 pr-4 border-right">blue</div>
+        <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
+      </div>
+    </div>
+
   </div>
   <!-- 게시글 1개 마지막 부분입니다-->
 </div>

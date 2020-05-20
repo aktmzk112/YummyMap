@@ -51,7 +51,7 @@
    <a class="navbar-brand tcolor logo" href="#" id="">
        YUMMY MAP
    </a>
-   <div class="b-subtitle text-right"><p class="pt-3">title</p></div>
+   <div class="b-subtitle text-left"><p class="pt-3">title</p></div>
    <div class=" nav-item-1 d-flex justify-content-end">
        <a class="navbar-brand nav-item-size" href="#" id="">
            <i class="fas fa-gamepad"></i>
