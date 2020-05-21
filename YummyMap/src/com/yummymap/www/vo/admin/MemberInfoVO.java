@@ -1,5 +1,9 @@
 package com.yummymap.www.vo.admin;
-
+/**
+ * 이 클래스는 맴버 정보 조회 데이터를 담을 VO 클래스 입니다.
+ * @author 유태희
+ * @since 2020.05.21
+ */
 import java.sql.*;
 import java.text.*;
 public class MemberInfoVO {
