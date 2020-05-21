@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />\
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 	<link rel="stylesheet" href="/YummyMap/css/admin/base.css">
 	<link rel="stylesheet" href="/YummyMap/css/nav.css">
 	<link rel="stylesheet" href="/YummyMap/css/game/game.css">
 	<link rel="stylesheet" href="/YummyMap/css/nav.css">
-	<script type="text/javascript" src="/ClsProj/js/jquery-3.5.0.min.js"></script>
-	<script type="text/javascript" src="/ClsProj/js/game/Winwheel.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>`
+	<script type="text/javascript" src="/YummyMap/js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="/YummyMap/js/game/Winwheel.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/YummyMap/js/game/game.js"></script>
 	
 	<title>게임 화면</title>
 	<style>
         
 	</style>
-
-
 </head>
 
 <body>
@@ -46,7 +46,6 @@
                                 </path>
                             </svg></a></div>
                 </div>
-                <!-- <a href="#" class="badge badge-light nav-item" id="join">Join</a>-->
                 <a href="#" class="badge badge-light nav-item" id="login">LOGIN</a>
                 <a href="#" class="badge badge-light nav-item" id="logout">LOGOUT</a>
             </div>
@@ -73,18 +72,18 @@
         <p>카테고리를 선택해주세요</p>
     </div>
     <ul class="cate alert alert-light d-flex" role="alert">
-        <li class="pr-4 cate-item" >#한식</li>
-        <li class="pr-4 cate-item" >#중식</li>
-        <li class="pr-4 cate-item" >#일식</li>
+    	<c:forEach var="data" items="${list}">
+        <li class="pr-4 cate-item item-h" >#${data}</li>
+        </c:forEach>
     </ul> 
     <div class="dnone" id="selbox">
         <div class="d-flex">
             <p>메뉴를 선택해주세요</p>
             <p class="pl-2 text-primary">5개 선택</p>
         </div>
-        <ul class="cate alert alert-light" id="itemBox" role="alert">
+        <div class="cate alert alert-light d-flex flex-wrap justify-content-center" id="itemBox">
             
-        </ul>
+        </div>
     </div>
     <div class="mt-5">
         <p>게임시작</p>
@@ -102,7 +101,6 @@
 </div>
 <!-- body 마지막 입니다-->
 </body>
-<script type="text/javascript" src="../../js/game/game.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
     let cate = new Array();
@@ -112,22 +110,25 @@ $(document).ready(function () {
         getItems();
     });
 
-let getItems = $.ajax({
-                    url:'',
-                    type:'post',
-                    dataType:'json',
-                    data:{
-                        'cate':item
-                    },
-                    success:function(obj){
-                        let obj = obj.items;
-                        for(let i=0; i<obj.length; i++) {
-                            let getItem = obj[i];
-                            $('#itemBox').append('<li class="pr-4 getItem" href="">#'+getItem+'</li>');
-                        }
-                        $('#selbox').show();
-                    }
-                });
+let getItems = function() {
+	$.ajax({
+        url:'/YummyMap/game/gameItem.mmy',
+        type:'post',
+        dataType:'json',
+        data:{
+            'cate':item
+        },
+        success:function(data){
+            let obj = data.items;
+            for(let i=0; i<obj.length; i++) {
+                let getItem = obj[i];
+                $('#itemBox').append('<p class="pr-4 item-h getItem" href="">#'+getItem+'</p>');
+            }
+            $('#selbox').slideDown(100);
+        }
+    });
+}
+				
 });
 </script>
 </html>
