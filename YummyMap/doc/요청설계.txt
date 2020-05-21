@@ -35,3 +35,25 @@
 	파라미터 : 번호
 	컨트롤러 : /com.yummymap.www.controller.admin.RememberView
 	뷰		 : /admin/remember.jsp
+	
+	
+	
+	
+	
+	
+	
+	
+#########게임##########################################
+1. 게임페이지 뷰 요청 
+	요청내용 : /game/game.mmy
+	파라미터 : 
+	컨트롤러 : yummymap.www.controller.game.Game
+	뷰		 : /game/game.jsp
+--------------------------------------------------------
+2. 메뉴 아이템 비동기 처리 요청 
+	요청내용 : /game/gameItem.mmy
+	파라미터 : 카테고리
+	컨트롤러 : com.yummymap.www.controller.game.GameItem
+	뷰		 : 비동기
+--------------------------------------------------------
+#########게임 끝##########################################
