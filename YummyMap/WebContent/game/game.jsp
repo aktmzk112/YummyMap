@@ -1,24 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />\
 	<link rel="stylesheet" href="/YummyMap/css/admin/base.css">
-	<link rel="stylesheet" href="/YummyMap/css/admin/game.css">
 	<link rel="stylesheet" href="/YummyMap/css/nav.css">
-	<script type="text/javascript" src="/YummyMap/js/jquery-3.5.0.min.js"></script>
-	<script type="text/javascript" src="/YummyMap/js/game/Winwheel.js"></script>
+	<link rel="stylesheet" href="/YummyMap/css/game/game.css">
+	<link rel="stylesheet" href="/YummyMap/css/nav.css">
+	<script type="text/javascript" src="/ClsProj/js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="/ClsProj/js/game/Winwheel.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>`
 	
 	<title>게임 화면</title>
 	<style>
-
+        
 	</style>
 
 
@@ -54,10 +52,10 @@
             </div>
         </div>
     </div>
-    <a class="navbar-brand tcolor logo" href="#" id="">
+    <a class="navbar-brand tcolor logo" href="/YummyMap/main.mmy">
         YUMMY MAP
     </a>
-    <div class="b-subtitle text-left"><p class="pt-3">커뮤니티</p></div>
+    <div class="b-subtitle text-left"><p class="pt-3">골라줘게임</p></div>
     <div class=" nav-item-1 d-flex justify-content-end">
         <a class="navbar-brand nav-item-size" href="#" id="">
             <i class="fas fa-gamepad"></i>
@@ -69,40 +67,67 @@
   </div>
   <!-- nav 마지막 입니다-->
   
-  <!-- body 시작 입니다-->
-	<div class="main-body" style="width: 840px;">
-		<div class="bar"></div>
+<!-- body 시작 입니다-->
+<div class="main-body mt-4" style="width: 840px;">
+    <div>
+        <p>카테고리를 선택해주세요</p>
+    </div>
+    <ul class="cate alert alert-light d-flex" role="alert">
+        <li class="pr-4 cate-item" >#한식</li>
+        <li class="pr-4 cate-item" >#중식</li>
+        <li class="pr-4 cate-item" >#일식</li>
+    </ul> 
+    <div class="dnone" id="selbox">
+        <div class="d-flex">
+            <p>메뉴를 선택해주세요</p>
+            <p class="pl-2 text-primary">5개 선택</p>
+        </div>
+        <ul class="cate alert alert-light" id="itemBox" role="alert">
+            
+        </ul>
+    </div>
+    <div class="mt-5">
+        <p>게임시작</p>
+    </div>
+    <div class="d-flex">
+        <div class="panbox border">
+    
+        </div>
+    </div>
+    <div class="mt-2 mb-5 btnbox text-center">
+        <button type="button" class="btn btn-primary btnw">시작</button>
+        <button type="button" class="btn btn-secondary btnw">초기화</button>
+    </div>
 
-		<div style="width: 500px; margin: auto;" class="mt-5 mb-5">
-			<div class="border-bottom p-3 text-center" id="menuBox">
-			<input type="checkbox" id="menu"  value="짜장면">짜장면
-				<input type="checkbox" id="menu"  value="밥">밥
-				<input type="checkbox" id="menu"  value="국">국
-				<input type="checkbox" id="menu"  value="반찬">반찬
-			</div>
-
-			<div style="max-width: 500px; height: 300px;" class="">
-
-				<div id="canvasContainer" class="mt-3">
-					<canvas id='canvas' width='500' height='300'>
-						메뉴를 선택하세요
-					</canvas>
-					<img id="prizePointer" src="../../img/game/basic_pointer.png" alt="V" />
-				</div>
-			</div>
-
-			<div class="text-center my-2 ">
-				<button type="button" id="bt1"  class="px-5 py-2 btn btn-success">돌리기</button>
-				<button type="button" id="bt2" class="px-5 py-2 btn btn-warning" >초기화</button>
-			</div>
-		</div>
-		<div class="bar"></div>
-	</div>
-  <!-- body 마지막 입니다-->
+</div>
+<!-- body 마지막 입니다-->
 </body>
 <script type="text/javascript" src="../../js/game/game.js"></script>
 <script type="text/javascript">
+$(document).ready(function () {
+    let cate = new Array();
+    let item;
+    $('.cate-item').click(function(){
+        item = $(this).text().substring(1);
+        getItems();
+    });
 
+let getItems = $.ajax({
+                    url:'',
+                    type:'post',
+                    dataType:'json',
+                    data:{
+                        'cate':item
+                    },
+                    success:function(obj){
+                        let obj = obj.items;
+                        for(let i=0; i<obj.length; i++) {
+                            let getItem = obj[i];
+                            $('#itemBox').append('<li class="pr-4 getItem" href="">#'+getItem+'</li>');
+                        }
+                        $('#selbox').show();
+                    }
+                });
+});
 </script>
-
 </html>
