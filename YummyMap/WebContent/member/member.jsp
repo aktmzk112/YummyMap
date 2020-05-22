@@ -7,8 +7,8 @@
 <title>My page</title>
 <link rel="stylesheet" href="/YummyMap/css/member/user.css">
 <link rel="stylesheet" href="/YummyMap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/YummyMap/css/member/member.css">
 <link rel="stylesheet" href="/YummyMap/css/nav.css">
+<link rel="stylesheet" href="/YummyMap/css/member/member.css">
 <script type="text/javascript" src="/YummyMap/js/jquery-3.5.0.min.js"></script>
 <style>
 
@@ -65,7 +65,7 @@
    <a class="navbar-brand tcolor logo" href="#" id="">
        YUMMY MAP
    </a>
-   <div class="b-subtitle text-right"><p class="pt-3">마이페이지</p></div>
+   <div class="b-subtitle text-left"><p class="pt-3">마이페이지</p></div>
    <div class=" nav-item-1 d-flex justify-content-end">
        <a class="navbar-brand nav-item-size" href="#" id="">
            <i class="fas fa-gamepad"></i>
@@ -97,7 +97,18 @@
          </div>
             <div class="container">
                <div class="row mt-5 ">
-                  <div class="col h90 border">사용자 이름</div>
+                  <div class="col border d-flex align-items-center">
+						<div class="col ">
+							 <div class="d-flex text-left padd-left ">
+							 	<h6>사용자 이름 : </h6>
+							 	<p class="pl-2">최두용</p>
+							 </div>
+							 <div class="d-flex text-left padd-left ">
+							 	<h6>아이디 : </h6>
+							 	<p class="pl-5">dDragon</p>
+							 </div>
+						</div>
+                   </div>
                   <div class="col h90 border" id="ctag">
                     <div id="ee">
                        <span>비밀번호 변경시 <br>수정버튼을 눌러주세요</span>     
@@ -125,8 +136,8 @@
                   </div>
                </div>
                <div class="row">
-                  <div class="col h90 border">휴대전화</div>
-                  <div class="col h90 border">이메일</div>
+                  <div class="col h90 border text-left "><h6 class="mt-2">휴대전화</h6></div>
+                  <div class="col h90 border text-left"><h6 class="mt-2">이메일</h6></div>
                </div>
 
             </div>
