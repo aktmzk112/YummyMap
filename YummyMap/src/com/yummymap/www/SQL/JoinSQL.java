@@ -1,13 +1,13 @@
 package com.yummymap.www.SQL;
 
 public class JoinSQL {
-	public final int SEL_LOGIN_CNT = 1001;
+	public final int CHECK_LOGIN = 1001;
 	public final int ADD_MEMB = 1002;
 	
 	public String getSQL(int code) {
 		StringBuffer buff = new StringBuffer();
 		switch(code) {
-		case SEL_LOGIN_CNT:
+		case CHECK_LOGIN:
 			buff.append("SELECT ");
 			buff.append("	COUNT(*) cnt ");
 			buff.append("FROM ");
@@ -18,10 +18,10 @@ public class JoinSQL {
 		break;
 		case ADD_MEMB:
 			buff.append("INSERT INTO ");
-			buff.append("	member(mno, mname, mid, mpw, memail, grade, tel, ano) ");
+			buff.append("	member(mno, mname, mid, mpw, mtel, memail) ");
 			buff.append("VALUES( " );
-			buff.append("	(SELECT NVL(MAX(mno)+1, 1000) FROM member), ");
-			buff.append("	?, ?, ?, ?, ?, ?, ? ");
+			buff.append("	getmno.nextval, ");
+			buff.append("	?,?,?,?,?");
 			buff.append(")");
 			break;
 		}

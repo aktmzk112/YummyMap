@@ -67,14 +67,14 @@
 
 #########멤버 ##########################################
 1. 로그인 화면 요청
-	요청내용 : /member/Login.mmy
+	요청내용 : /join/login.mmy
 	파라미터 : 
-	컨트롤러 : com.yummymap.www.controller.member.Login
+	컨트롤러 : com.yummymap.www.controller.join.Login
 	뷰		 : /member/Login.jsp
 --------------------------------------------------------
 2. 로그인 처리 요청
-	요청내용 : /member/LoginProc.mmy
+	요청내용 : /join/LoginProc.mmy
 	파라미터 : id, pw
-	컨트롤러 : com.yummymap.www.controller.member.LoginProc
+	컨트롤러 : com.yummymap.www.controller.join.LoginProc
 	뷰		 : /main_1.jsp
 --------------------------------------------------------

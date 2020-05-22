@@ -4,64 +4,81 @@ import java.sql.*;
 import java.text.*;
 
 public class MemberVO {
-	private int mno;
-	private String mname, mid, mpw, mtel, memail, mDate;
-	private Date joinDate;
-	private Time joinTime;
+	int mno;
+	String name, id, pw, tel, mail, grade, issue, sdate;
+	Date joinDate;
+	Time joinTime;
 	public int getMno() {
 		return mno;
 	}
 	public void setMno(int mno) {
 		this.mno = mno;
 	}
-	public String getMname() {
-		return mname;
+	public String getName() {
+		return name;
 	}
-	public void setMname(String mname) {
-		this.mname = mname;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getMid() {
-		return mid;
+	public String getId() {
+		return id;
 	}
-	public void setMid(String mid) {
-		this.mid = mid;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getMpw() {
-		return mpw;
+	public String getPw() {
+		return pw;
 	}
-	public void setMpw(String mpw) {
-		this.mpw = mpw;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
-	public String getMtel() {
-		return mtel;
+	public String getTel() {
+		return tel;
 	}
-	public void setMtel(String mtel) {
-		this.mtel = mtel;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
-	public String getMemail() {
-		return memail;
+	public String getMail() {
+		return mail;
 	}
-	public void setMemail(String memail) {
-		this.memail = memail;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-	public Date getJoindate() {
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public String getIssue() {
+		return issue;
+	}
+	public void setIssue(String issue) {
+		this.issue = issue;
+	}
+	public String getSdate() {
+		return sdate;
+	}
+	public void setSdate(String sdate) {
+		this.sdate = sdate;
+	}
+	public void setSdate() {
+		SimpleDateFormat f1 = new SimpleDateFormat("yyyy/MM/dd ");
+		SimpleDateFormat f2 = new SimpleDateFormat("HH:mm");
+		this.sdate = f1.format(joinDate) + f2.format(joinTime);
+	}
+	public Date getJoinDate() {
 		return joinDate;
 	}
-	public void setJoindate(Date joindate) {
-		this.joinDate = joindate;
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
 	}
-	public String getmDate() {
-		return mDate;
+	public Time getJoinTime() {
+		return joinTime;
 	}
-	public void setmDate() {
-		SimpleDateFormat form1 = new SimpleDateFormat("yyyy년 MM월 dd일");
-		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm");
-		this.mDate = form1.format(joinDate) + "  " + form2.format(joinTime);
+	public void setJoinTime(Time joinTime) {
+		this.joinTime = joinTime;
 	}
-	public void setmDate(String mDate) {
-		this.mDate = mDate;
-	}
-	
 	
 	
 }
