@@ -90,3 +90,24 @@
 	컨트롤러 : com.yummymap.www.controller.join.JoinProc
 	뷰		 : /main_1.jsp
 --------------------------------------------------------
+
+
+############게시판
+1. 게시판 메인 페이지 요청
+	요청내용 : /board/boardMain.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.board.BoardMain
+	뷰		 : /board/boardMain.jsp
+	------------------------------------------------------------------------------
+2. 게시판 글쓰기 페이지 요청
+	요청내용 : /board/boardWrite.mmy
+	파라미터 : id, pw
+	컨트롤러 : /com.yummymap.www.controller.board.BoardWrite
+	뷰		 : /board/boardWrite.jsp
+	------------------------------------------------------------------------------
+3. 게시판 상세보기 페이지 요청
+	요청내용 : /board/boardDetail.mmy
+	파라미터 : 
+	컨트롤러 : /com.yummymap.www.controller.board.BoardDetail
+	뷰		 : /board/boardDetail.jsp
+	------------------------------------------------------------------------------

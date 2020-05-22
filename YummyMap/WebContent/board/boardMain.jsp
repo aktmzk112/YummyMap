@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,6 +10,14 @@
     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="/YummyMap/css/board/boardMain.css">
     <link rel="stylesheet" href="/YummyMap/css/nav.css">
+    <script type="text/javascript" src="/YummyMap/js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#write').click(function(){
+			$(location).attr('href', '/YummyMap/board/boardWrite.mmy');
+		});
+	});
+	</script>
 </head>
 <body>
 
@@ -45,7 +53,7 @@
   <a class="navbar-brand tcolor logo" href="#" id="">
       YUMMY MAP
   </a>
-  <div class="b-subtitle text-left"><p class="pt-3">커뮤니티</p></div>
+  <div class="b-subtitle text-left"><p class="pt-3 tcolor">Community</p></div>
   <div class=" nav-item-1 d-flex justify-content-end">
     <a class="navbar-brand nav-item-size" href="#" id="">
       <i class="fas fa-gamepad"></i>
@@ -70,19 +78,21 @@
   <!--게시글 영역 입니다-->
     <div class="txt-line shadow-sm border mt-2 mb-4">
       <!-- 게시글 1개 시작 부분입니다-->
+       <c:forEach var="data" items="${LIST}">
       <div class="txt-body d-flex border-bottom" id="">
         <div class="txt-no text-center">
-          <div class="pt-4">1</div>
+          <div class="pt-4">${data.txtno}</div>
         </div>
         <div class="txt-title">
-          <div class="pt-4 bold-font">안녕하세요</div>
+          <div class="pt-4 bold-font">${data.title}</div>
           <div class="d-flex pt-2">
-            <div class="txt-title-info pr-4 border-right">2020/05/16</div>
-            <div class="txt-title-info pl-4 pr-4 border-right">blue</div>
-            <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천</p><p class="pl-2">7</p></div>
+            <div class="txt-title-info pr-4 border-right">${data.cdate}</div>
+            <div class="txt-title-info pl-4 pr-4 border-right">${data.lv}</div>
+            <div class="txt-title-info pl-4 pr-4 border-right d-flex"><p>추천${data.rnum}</p><p class="pl-2">7</p></div>
           </div>
         </div>
       </div>
+              </c:forEach>
       <!-- 게시글 1개 마지막 부분입니다-->
       <!-- 게시글 1개 시작 부분입니다-->
       <div class="txt-body d-flex border-bottom" id="">
@@ -98,6 +108,7 @@
           </div>
         </div>
 
+      
       </div>
       <!-- 게시글 1개 마지막 부분입니다-->
     </div>
