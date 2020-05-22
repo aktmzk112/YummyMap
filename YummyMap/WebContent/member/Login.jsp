@@ -60,7 +60,7 @@
       <form id="frm" action="/YummyMap/join/LoginProc.mmy" method="POST">
         <div class="form-group">
           <label for="id">I D</label>
-          <input type="email" class="form-control" id="id" name="pw">
+          <input type="text" class="form-control" id="id" name="id">
         </div>
         <div class="form-group">
           <label for="pw">P W</label>
@@ -81,9 +81,6 @@
         </div>
         <div class="mt-1">
           <button type="button" class="btn btn-warning kakaobtn">카카오 계정으로 로그인</button>
-        </div>
-        <div class="homebox">
-
         </div>
       </div>
     </div>
