@@ -78,3 +78,9 @@
 	컨트롤러 : com.yummymap.www.controller.join.LoginProc
 	뷰		 : /main_1.jsp
 --------------------------------------------------------
+3. 회원가입 뷰 요청
+	요청내용 : /join/join.mmy
+	파라미터 : id, pw
+	컨트롤러 : com.yummymap.www.controller.join.Join
+	뷰		 : /member/Register.jsp
+--------------------------------------------------------

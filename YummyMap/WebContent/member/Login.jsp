@@ -39,7 +39,7 @@
           </div>
       </div>
   </div>
-  <a class="navbar-brand tcolor logo" href="#" id="">
+  <a class="navbar-brand tcolor logo" href="/YummyMap/main.mmy" >
       YUMMY MAP
   </a>
   <div class="b-subtitle text-left"><p class="pt-3">로그인</p></div>
@@ -92,6 +92,7 @@
 </body>
 <script type="text/javascript">
 $(document).ready(function () {
+	//로그인 이벤트처리 입니다.
   $('#loginbtn').click(function(){
     let sid = $('#id').val();
     let spw = $('#pw').val();
@@ -102,6 +103,12 @@ $(document).ready(function () {
     $('#msg2').hide();
     $('#frm').submit();
   });
+	// 로그인시 실패시 msg를 출력해줍니다.
+	let result = '${param.r}';
+	if(result == 'x'){
+		$('#msg1').show();
+	}
+	
 });
 </script>
 </html>
