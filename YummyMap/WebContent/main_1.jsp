@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <a class="navbar-brand tcolor logo" href="#" id="">
+        <a class="navbar-brand tcolor logo" href="/YummyMap/main.mmy">
             YUMMY MAP
         </a>
         <div class=" nav-item-1 d-flex justify-content-end">
@@ -473,6 +473,10 @@ $(document).ready(function () {
   //게임네브버튼 이벤트 입니다.
     $('#game').click(function(){
     	$(location).attr('href', '/YummyMap/game/game.mmy');
+    });
+  //로그인버튼 이벤트 입니다.
+    $('#login').click(function(){
+    	$(location).attr('href', '/YummyMap/join/login.mmy');
     });
     
     

@@ -9,8 +9,8 @@ public class Login implements MmyController {
 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
-		// TODO Auto-generated method stub
-		return null;
+		String view = "/member/Login.jsp";
+		return view;
 	}
 
 }
