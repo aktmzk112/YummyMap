@@ -5,12 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.yummymap.www.controller.MmyController;
 
-public class Login implements MmyController {
+public class Mypage implements MmyController {
 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
-		String view = "/member/Login.jsp";
-		return view;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
