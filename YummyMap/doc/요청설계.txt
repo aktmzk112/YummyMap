@@ -86,7 +86,7 @@
 --------------------------------------------------------
 4. 회원가입 처리 요청
 	요청내용 : /join/joinProc.mmy
-	파라미터 : id, pw, tel(teltop, telmid, telend), mail(email1, email2), birth
+	파라미터 : id, pw, tel(teltop, telmid, telend), mail(email1, email2), birth, gen
 	컨트롤러 : com.yummymap.www.controller.join.JoinProc
 	뷰		 : /main_1.jsp
 --------------------------------------------------------
