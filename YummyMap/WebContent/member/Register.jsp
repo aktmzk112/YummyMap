@@ -86,8 +86,19 @@
         </div>
         <div class="form-group">
           <label for="repw">비밀번호 재입력</label>
-          <input type="password" class="form-control ckinput" id="repw" name="repw">
+          <input type="password" class="form-control ckinput" id="repw">
           <small id="pwmsg" class="text-danger">비밀번호가 일치하지 않습니다</small>
+        </div>
+        <div class="form-group">
+          <label for="id" class="idlabel mr-2 d-inline-block">주민번호</label>
+          <div class="d-flex">
+            <input type="text" class="form-control ckinput" name="pid1" id="birth" placeholder="생년월일 6자리">
+            <p>-</p>
+            <div class="border rounded-sm d-flex b-box">
+              <input type="text" class="form-control border-0 ckinput pid2" name="gen" id="pid2" maxlength="1">
+              <p class="form-control border-0 bg-white ml-1" name="pid1" id="pid1">******</p>
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="telmid">휴대전화</label>
@@ -116,14 +127,10 @@
               <option value="@hanmir.com">hanmir.com</option>
               <option value="@nate.com">nate.com</option>
               <option value="@korea.com">korea.com</option>
-              <option >직접입력</option>
+              <option value="" >직접입력</option>
             </select>
           </div>
           <small id="pwmsg" class="text-danger">이메일 인증을 진행해주세요</small>
-        </div>
-        <div class="form-group">
-          <label for="id" class="idlabel mr-2 d-inline-block">생년월일</label>
-          <input type="date" class="form-control ckinput" name="birth" id="birth">
         </div>
       </form>
       <div class="btn-box">
@@ -149,16 +156,14 @@
 </body>
 <script type="text/javascript">
 $(document).ready(function () {
-	//완료버튼 클릭 이벤트입니다.
   $('#joinbtn').click(function(){
     let result = checkfrm();
     if(result == -1){
       alert('모든 입력을 완료해주세요');
       return;
     }
-    $('#frm').submit();
   });
-	//모든 인풋태그의 값 유무를 확인해줍니다.
+
   function checkfrm(){
     let formtag = $('.ckinput');
     for(let i=0; i<formtag.length; i++) {
